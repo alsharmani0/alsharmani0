@@ -5,6 +5,8 @@ description: Make a short film that looks hand-drawn or hand-printed, where ever
 
 # Hand-drawn canvas animation
 
+Read [PROVENANCE.md](PROVENANCE.md) for the local renderer correction and known runtime/output limitations before rendering.
+
 You are drawing every frame of a 10 to 30 second film in JavaScript. One HTML
 file that loads `core.js`, on vanilla Canvas 2D, without libraries or a video
 model. Images appear only in the doodle look, where a found photo is the

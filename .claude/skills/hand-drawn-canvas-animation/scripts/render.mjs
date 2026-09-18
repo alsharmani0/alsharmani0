@@ -15,7 +15,7 @@
 // Needs: puppeteer-core next to this script (npm i), ffmpeg on PATH for the full render.
 import puppeteer from 'puppeteer-core';
 import {execFileSync} from 'node:child_process';
-import {existsSync, mkdirSync, writeFileSync} from 'node:fs';
+import {existsSync, mkdirSync, readdirSync, unlinkSync, writeFileSync} from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 
@@ -55,6 +55,16 @@ try {
   const N = await page.evaluate(() => window.__NDRAW), size = await page.evaluate(() => window.__size);
   if (!Number.isInteger(N) || N <= 0) throw new Error('window.__NDRAW missing: the page did not load or is not built on film-template.html');
   total = N; console.log(`${name}: ${N} drawn frames, logical ${size.W}x${size.H}, output ${size.w}x${size.h}`);
+  // A full render replaces its numbered frames; previews must keep existing renders.
+  // Do not remove unrelated files, directories, or another film's frame folder.
+  if (!only && !grid) {
+    for (const entry of readdirSync(frames, {withFileTypes: true})) {
+      if (/^\d{4,}\.png$/.test(entry.name) && (entry.isFile() || entry.isSymbolicLink())) {
+        unlinkSync(path.join(frames, entry.name));
+      }
+    }
+  }
+
   if (grid) { const sheet = path.join(outDir, `${name}-grid.jpg`); save(sheet, await page.evaluate(n => window.__grid(n, 240), grid)); console.log(`grid: ${sheet}`); }
   const list = grid ? [] : only ? only.filter(i => i >= 0 && i < N) : [...Array(N).keys()];
   const t0 = Date.now();
@@ -83,7 +93,7 @@ if (only || grid) process.exit();
 const ff = args => execFileSync('ffmpeg', ['-v', 'error', '-y', ...args], {stdio: 'inherit'});
 const mp4 = path.join(outDir, `${name}.mp4`), sheet = path.join(outDir, `${name}-contact.jpg`);
 // drawn at 12 fps, duplicated to 24 fps: the "on twos" cadence
-ff(['-framerate', '12', '-i', path.join(frames, '%04d.png'), '-r', '24', '-pix_fmt', 'yuv420p', '-crf', '18', mp4]);
+ff(['-framerate', '12', '-i', path.join(frames, '%04d.png'), '-r', '24', '-frames:v', String(total * 2), '-pix_fmt', 'yuv420p', '-crf', '18', mp4]);
 // two tiles per second of film (every 6th drawn frame = every 12th output frame), 6 across
 const rows = Math.ceil(total / 6 / 6);
 ff(['-i', mp4, '-vf', `select=not(mod(n\\,12)),scale=240:-1,tile=6x${rows}`, '-frames:v', '1', sheet]);
