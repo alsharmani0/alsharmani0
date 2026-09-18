@@ -8,9 +8,9 @@ Author: Alexey Fateev. Licensed MIT — the upstream licence is kept here as
 `LICENSE.upstream`.
 
 This copy intentionally carries the local renderer correction documented
-below, a link to these notes in `SKILL.md`, and explicit sound/no-sound
-deliverable names in the brief template. It is therefore not byte-for-byte
-upstream.
+below, the narrowed frontmatter description, a link to these notes in
+`SKILL.md`, and explicit sound/no-sound deliverable names in the brief
+template. It is therefore not byte-for-byte upstream.
 
 ## Local renderer correction
 
@@ -27,13 +27,25 @@ older, longer version of the same film:
 The regression coverage lives in `scripts/tests/render.test.mjs` and is run by
 `npm test` from `scripts/`.
 
+## Narrowed description
+
+Upstream claims "a procedural or generative short film" as a trigger phrase.
+`procedural-film`, vendored in the same repository, claims "a procedural film"
+as its own. Both matched a request phrased that way, and the two differ by
+roughly an order of magnitude in cost, so which one fired was left to chance.
+
+The local frontmatter therefore drops that phrase and ends with a pointer to
+`procedural-film` for vertical, pipeline-built films. `procedural-film` carries
+the mirror-image edit. Nothing outside the `description:` line changed, and the
+skill's own behaviour is untouched.
+
 ## Operational notes
 
-- **Choose one base runtime.** This skill and `procedural-film` have overlapping
-  descriptions. Choose this skill for its five named visual systems, one-file
-  `defineFilm` runtime, or photo-doodle workflow. Choose `procedural-film` for
-  its multi-file, gated production pipeline. Do not load both cores into one
-  film; borrowing a look requires an explicit port onto the selected base.
+- **Choose one base runtime.** Choose this skill for its five named visual
+  systems, one-file `defineFilm` runtime, or photo-doodle workflow. Choose
+  `procedural-film` for its multi-file, gated production pipeline. Do not load
+  both cores into one film; borrowing a look requires an explicit port onto the
+  selected base.
 - **Output names distinguish sound.** A full render always writes
   `<film>.mp4`, which is silent video. When the page exposes `window.__wav`, it
   also writes `<film>-score.wav` and the scored `<film>-final.mp4`; deliver the
@@ -69,7 +81,9 @@ Stage an upstream refresh separately and compare it with this copy before
 replacing files. Record the new upstream commit, then preserve or deliberately
 reapply the full-render frame cleanup and the `2 * __NDRAW` ffmpeg limit.
 Preserve `scripts/tests/render.test.mjs` and the `test` command in
-`scripts/package.json`, plus the provenance link and sound-deliverable guidance.
+`scripts/package.json`, plus the provenance link, the sound-deliverable guidance
+and the narrowed `description:` line — an upstream refresh will reintroduce the
+"procedural or generative short film" trigger phrase and with it the collision.
 Run `npm ci` and `npm test` from `scripts/`; do not
 accept the refresh if the stale-frame regression test fails. Update the commit
 above only after the retained local delta has been verified.

@@ -6,6 +6,26 @@ at commit `ec29e23474860e83ab5b4d0131bd6e6b92e12a48`.
 Author: Dean Kuhn. Licensed MIT — the upstream licence is kept here as
 `LICENSE.upstream`.
 
+This copy intentionally carries the narrowed frontmatter description documented
+below. Everything else is upstream as vendored.
+
+## Narrowed description
+
+Upstream offers "a short hand-drawn animated film about a subject" as a trigger
+phrase, which is a plain description of `hand-drawn-canvas-animation`, vendored
+in the same repository — and that skill in turn claimed "a procedural or
+generative short film". Each skill advertised the other's job, so a request
+phrased either way could land on either one, and they differ by roughly an
+order of magnitude in cost.
+
+The local frontmatter therefore drops that phrase, names what actually
+distinguishes this pipeline (vertical 1080x1920, roughly 30 seconds, one agent
+per shot, a six-check gate, paper against blueprint), and ends with a pointer to
+`hand-drawn-canvas-animation` for short single-file films and for the riso,
+screen-print, graphite and doodle looks. That skill carries the mirror-image
+edit. Nothing outside the `description:` line changed, and the pipeline itself
+is untouched.
+
 ## What was left out
 
 Upstream ships a worked example at `examples/butterfly-life/` (16 MB, mostly a
@@ -18,8 +38,13 @@ The three reference frames `SKILL.md` tells the agent to look at first
 `example-blueprint-frame.jpg`) are part of the skill folder and are included,
 so the visual target survives.
 
-To update, re-copy the upstream `skills/procedural-film` folder and bump the
-commit above. Do not edit files in place.
+## Updating from upstream
+
+Stage an upstream refresh separately and compare it with this copy before
+replacing files. Record the new upstream commit, then reapply the narrowed
+`description:` line — a plain re-copy reintroduces the "short hand-drawn
+animated film" trigger phrase and with it the collision. Do not edit anything
+else in place.
 
 ## Runtime requirements
 

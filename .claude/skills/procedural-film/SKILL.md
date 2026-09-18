@@ -1,6 +1,6 @@
 ---
 name: procedural-film
-description: Procedural film — turn a subject into a short vertical animated film drawn and scored entirely in JavaScript. Use when the user asks for a procedural film, or a short hand-drawn animated film about a subject.
+description: Procedural film — turn a subject into a roughly 30 second vertical 1080x1920 film, drawn and scored entirely in JavaScript, through a multi-agent pipeline — research, art bible, storyboard, one agent per shot, a six-check gate and critic waves. Two plates only - inked paper cut against navy blueprint. Use when the user asks for a procedural film, for a vertical or phone-format animated film about a subject, or names this pipeline. For a 10 to 30 second film in any aspect ratio from a single HTML file, or for the riso, screen-print, graphite or doodle-on-photo looks, use hand-drawn-canvas-animation instead.
 ---
 
 # Procedural film
