@@ -18,7 +18,8 @@ Beats (8..14, each 0.25..3 s):
   2. ...
 Must include: one establishing shot (A or U), one drawn transition (B, iris or torn section),
               one of C/D/E/O, one POV or gallery (H or P), sign-off (S)
-Deliver: <name>.html, out/<name>.mp4, out/<name>-contact.jpg
+Deliver: <name>.html with core.js, out/<name>-final.mp4 (with sound), out/<name>-contact.jpg
+         Use out/<name>.mp4 only when a silent film is intended.
 ```
 
 Instruction to prepend when handing the brief to another agent:
