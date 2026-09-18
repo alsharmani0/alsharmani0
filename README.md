@@ -1,33 +1,34 @@
 # Moe
 
-I like the unglamorous part of software: getting small services online, making
-them observable, and leaving enough notes that the next fix does not depend on
-memory.
+**Linux · Web hosting · Developer tools**
 
-I work mostly around Linux servers, web hosting, small dashboards, and developer
-tools. The goal is simple: build things that are useful, inspectable, and not
-mysterious after deployment.
+I build small web apps, command-line tools and Linux setups. I like working
+across the whole process: writing the code, getting it online and documenting
+how to run it.
 
-## What I Build
+## Featured project
 
-- small status and service dashboards for real infrastructure
-- static websites that are easy to deploy and hand off
-- Linux runbooks with the commands, tradeoffs, and recovery notes included
-- tiny CLI tools for answering practical machine and environment questions
-- reproducible patch notes instead of vague "fixed it locally" history
+### [Service Watch Dashboard](https://github.com/alsharmani0/service-watch-dashboard)
 
-## Selected Projects
+A dashboard for checking current HTTP service health at a glance: status codes,
+response times and up/degraded/down states, with automatic refresh. Built with
+Node.js and vanilla JavaScript, with no third-party runtime dependencies.
 
-| Project | What it is | Why it matters |
-| --- | --- | --- |
-| [service-watch-dashboard](https://github.com/alsharmani0/service-watch-dashboard) | A browser dashboard for checking HTTP service health. | Turns "is it down?" into a quick answer instead of a terminal hunt. |
-| [website-atelier-heimw](https://github.com/alsharmani0/website-atelier-heimw) | A real public website for a local art atelier. | Plain HTML/CSS, deployed simply, with the actual site at [atelier-heimw.de](https://atelier-heimw.de). |
-| [homelab-mini](https://github.com/alsharmani0/homelab-mini) | A small Ubuntu/Rocky Linux homelab setup. | Documents reverse proxy, SSH hardening, firewall rules, and SELinux without pretending the lab is bigger than it is. |
-| [sysinfo-cli](https://github.com/alsharmani0/sysinfo-cli) | A Python CLI for system information. | Gives quick CPU, memory, disk, and OS output as text or JSON. |
-| [openclaw-upstream-patches](https://github.com/alsharmani0/openclaw-upstream-patches) | Sanitized patch notes and issue context. | Keeps upstream-fix work reproducible instead of trapped in a local checkout. |
+[![Service Watch Dashboard showing three HTTP services and their response times](./assets/service-watch-dashboard.png)](https://github.com/alsharmani0/service-watch-dashboard)
 
-## Current Bet
+[Live demo](https://service-watch-dashboard.onrender.com/) · [Source & setup](https://github.com/alsharmani0/service-watch-dashboard#running-locally)
 
-I am turning `service-watch-dashboard` into the project that best represents
-the profile: a small control panel for personal services, with screenshots,
-smoke tests, deployment notes, and a path toward Docker/Ansible automation.
+## More projects
+
+| Project | What I built |
+| --- | --- |
+| [Mini Homelab](https://github.com/alsharmani0/homelab-mini) | A documented two-server lab with an Ubuntu app server and a Rocky Linux NGINX gateway, covering systemd, SSH key-only access, firewalls and SELinux. |
+| [Atelier HeimW](https://github.com/alsharmani0/website-atelier-heimw) | A responsive website for a local art atelier, built with HTML and CSS and hosted on Netlify. [Visit the site](https://atelier-heimw.de). |
+| [sysinfo-cli](https://github.com/alsharmani0/sysinfo-cli) | A Python CLI that reports CPU, memory, disk and OS information as readable text or JSON. |
+
+## Tools I work with
+
+`Linux` `Ubuntu` `Rocky Linux` `NGINX` `systemd` `Python` `Node.js` `JavaScript` `HTML/CSS` `Git` `Netlify`
+
+I also keep an [OpenClaw source patch and issue notes](https://github.com/alsharmani0/openclaw-upstream-patches)
+with technical context for upstream review.
