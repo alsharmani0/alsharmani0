@@ -1,34 +1,40 @@
 # Moe
 
-**Linux · Web hosting · Developer tools**
+**Web projects · Practical automation · Developer tools**
 
-I build small web apps, command-line tools and Linux setups. I like working
-across the whole process: writing the code, getting it online and documenting
-how to run it.
+I work on websites, automation and tools that solve practical problems.
+My recent work includes LUNIVERSE Collection and improvements to tools for
+creating animations with JavaScript.
 
-## Featured project
+## LUNIVERSE Collection
 
-### [Service Watch Dashboard](https://github.com/alsharmani0/service-watch-dashboard)
+A website for LUNIVERSE Collection in German and English, built with Next.js and TypeScript.
+The project includes responsive layouts, image optimisation, contact forms
+and deployment on Netlify.
 
-A dashboard for checking current HTTP service health at a glance: status codes,
-response times and up/degraded/down states, with automatic refresh. Built with
-Node.js and vanilla JavaScript, with no third-party runtime dependencies.
+[![LUNIVERSE Collection website homepage](./assets/luniverse-collection.png)](https://luniverse-collection.com)
 
-[![Service Watch Dashboard showing three HTTP services and their response times](./assets/service-watch-dashboard.png)](https://github.com/alsharmani0/service-watch-dashboard)
+[Visit the website](https://luniverse-collection.com) · Source code is private.
 
-[Live demo](https://service-watch-dashboard.onrender.com/) · [Source & setup](https://github.com/alsharmani0/service-watch-dashboard#running-locally)
+## Tooling and fixes
 
-## More projects
+**Animation tooling.** I use and adapt open-source workflows for films drawn
+with JavaScript and Canvas. The [vendored skills](./.claude/skills) are MIT-licensed
+work by Alexey Fateev and Dean Kuhn, with provenance retained. My changes include a
+[renderer fix with regression tests](https://github.com/alsharmani0/alsharmani0/pull/2)
+that prevents old frames from appearing in shortened renders.
 
-| Project | What I built |
-| --- | --- |
-| [Mini Homelab](https://github.com/alsharmani0/homelab-mini) | A documented two-server lab with an Ubuntu app server and a Rocky Linux NGINX gateway, covering systemd, SSH key-only access, firewalls and SELinux. |
-| [Atelier HeimW](https://github.com/alsharmani0/website-atelier-heimw) | A responsive website for a local art atelier, built with HTML and CSS and hosted on Netlify. [Visit the site](https://atelier-heimw.de). |
-| [sysinfo-cli](https://github.com/alsharmani0/sysinfo-cli) | A Python CLI that reports CPU, memory, disk and OS information as readable text or JSON. |
+**OpenClaw debugging.** A collection of
+[patches and issue notes](https://github.com/alsharmani0/openclaw-upstream-patches),
+including a WhatsApp outbound-target fix and a regression test. These are
+proposed changes, not merged upstream contributions.
 
-## Tools I work with
+<details>
+<summary>Earlier projects</summary>
 
-`Linux` `Ubuntu` `Rocky Linux` `NGINX` `systemd` `Python` `Node.js` `JavaScript` `HTML/CSS` `Git` `Netlify`
+- [Service Watch Dashboard](https://github.com/alsharmani0/service-watch-dashboard) — a small HTTP status dashboard built with Node.js and vanilla JavaScript. [Demo](https://service-watch-dashboard.onrender.com/).
+- [Atelier HeimW](https://github.com/alsharmani0/website-atelier-heimw) — a static website built with HTML and CSS. [Website](https://atelier-heimw.de).
+- [sysinfo-cli](https://github.com/alsharmani0/sysinfo-cli) — a Python exercise in CLI packaging and system information.
+- [Mini Homelab](https://github.com/alsharmani0/homelab-mini) — notes and example configuration from a small Linux lab.
 
-I also keep an [OpenClaw source patch and issue notes](https://github.com/alsharmani0/openclaw-upstream-patches)
-with technical context for upstream review.
+</details>
