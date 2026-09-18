@@ -1,40 +1,35 @@
 # Moe
 
-**Web projects · Practical automation · Developer tools**
+**Web development · Linux and automation · Developer tools**
 
-I work on websites, automation and tools that solve practical problems.
-My recent work includes LUNIVERSE Collection and improvements to tools for
-creating animations with JavaScript.
+I build websites and small tools that solve practical problems, and I like the
+operations side too: Linux servers, reverse proxies, deployment and CI.
+
+**Stack:** TypeScript · Next.js · React · Node.js · HTML/CSS · Python ·
+Linux (Ubuntu, Rocky) · NGINX · systemd · GitHub Actions · Netlify
 
 ## LUNIVERSE Collection
 
-A website for LUNIVERSE Collection in German and English, built with Next.js and TypeScript.
-The project includes responsive layouts, image optimisation, contact forms
-and deployment on Netlify.
+[![Homepage of the LUNIVERSE Collection website](./assets/luniverse-collection.webp)](https://luniverse-collection.com)
 
-[![LUNIVERSE Collection website homepage](./assets/luniverse-collection.png)](https://luniverse-collection.com)
+A website for LUNIVERSE Collection in German and English, built with Next.js,
+React and TypeScript as a static export on Netlify.
 
-[Visit the website](https://luniverse-collection.com) · Source code is private.
+- German and English page trees with translated URLs, for example
+  `/ueber-uns` and `/en/about-us`
+- a build-time image pipeline with sharp that writes AVIF, WebP and JPEG in
+  three widths and respects EXIF orientation
+- contact forms on Netlify Forms with a confirmation page per language, and
+  redirects to one canonical host
 
-## Tooling and fixes
+[Visit the website](https://luniverse-collection.com) · The source code is private.
 
-**Animation tooling.** I use and adapt open-source workflows for films drawn
-with JavaScript and Canvas. The [vendored skills](./.claude/skills) are MIT-licensed
-work by Alexey Fateev and Dean Kuhn, with provenance retained. My changes include a
-[renderer fix with regression tests](https://github.com/alsharmani0/alsharmani0/pull/2)
-that prevents old frames from appearing in shortened renders.
+## Projects
 
-**OpenClaw debugging.** A collection of
-[patches and issue notes](https://github.com/alsharmani0/openclaw-upstream-patches),
-including a WhatsApp outbound-target fix and a regression test. These are
-proposed changes, not merged upstream contributions.
-
-<details>
-<summary>Earlier projects</summary>
-
-- [Service Watch Dashboard](https://github.com/alsharmani0/service-watch-dashboard) — a small HTTP status dashboard built with Node.js and vanilla JavaScript. [Demo](https://service-watch-dashboard.onrender.com/).
-- [Atelier HeimW](https://github.com/alsharmani0/website-atelier-heimw) — a static website built with HTML and CSS. [Website](https://atelier-heimw.de).
-- [sysinfo-cli](https://github.com/alsharmani0/sysinfo-cli) — a Python exercise in CLI packaging and system information.
-- [Mini Homelab](https://github.com/alsharmani0/homelab-mini) — notes and example configuration from a small Linux lab.
-
-</details>
+| Project | What it is | Stack |
+|---|---|---|
+| [Service Watch Dashboard](https://github.com/alsharmani0/service-watch-dashboard) · [demo](https://service-watch-dashboard.onrender.com/) | Status dashboard for HTTP services with latency and auto-refresh, tested against local stub servers | Node.js, JavaScript |
+| [Mini Homelab](https://github.com/alsharmani0/homelab-mini) | Flask app on Ubuntu behind an NGINX reverse proxy on Rocky Linux, SSH key-only, SELinux enforcing, configs checked in CI | Linux, NGINX, systemd |
+| [atelier-heimw.de](https://github.com/alsharmani0/website-atelier-heimw) · [website](https://atelier-heimw.de) | Website for a local art atelier, live on its own domain | HTML, CSS, Netlify |
+| [canvas-animation-skills](https://github.com/alsharmani0/canvas-animation-skills) | Adapted open-source tooling for films drawn in JavaScript, with my renderer fix and its regression tests | JavaScript, Canvas, ffmpeg |
+| [sysinfo-cli](https://github.com/alsharmani0/sysinfo-cli) | Installable Python CLI for system information as text or JSON, tested on Linux, macOS and Windows | Python |
