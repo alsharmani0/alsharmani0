@@ -24,6 +24,24 @@ React and TypeScript as a static export on Netlify.
 
 [Visit the website](https://luniverse-collection.com) · The source code is private.
 
+## Belegsuche
+
+[![Search results in Belegsuche](https://raw.githubusercontent.com/alsharmani0/belegsuche/main/docs/screenshot.png)](https://github.com/alsharmani0/belegsuche)
+
+Local search for receipts, invoices and scanned documents on macOS. Text
+recognition runs on the Mac with Apple's Vision framework, and the index is
+SQLite full-text search, so no document leaves the machine.
+
+- search rules for German documents: amounts like `1.234,56 €`, invoice
+  numbers in different spellings, `Müller` = `Mueller`, street abbreviations,
+  compound words and typos
+- incremental indexing that survives an unplugged drive and resumes where it
+  stopped
+- search quality measured on a generated test corpus with held-out queries,
+  and 212 tests that run on macOS in CI
+
+[Source code](https://github.com/alsharmani0/belegsuche)
+
 ## atelier-heimw.de
 
 Website for a jewellery and workshop atelier in Eckernförde, live on its own
