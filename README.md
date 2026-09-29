@@ -47,7 +47,7 @@ SQLite full-text search, so no document leaves the machine.
 Website for a jewellery and workshop atelier in Eckernförde, live on its own
 domain. Plain HTML and CSS, hosted on Netlify.
 
-[Visit the website](https://atelier-heimw.de) · [Source code](https://github.com/alsharmani0/website-atelier-heimw)
+[Visit the website](https://atelier-heimw.de) · The source code is private.
 
 ## How I work
 
