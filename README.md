@@ -48,9 +48,19 @@ SQLite full-text search, so no document leaves the machine.
 
 ## Pfötchen
 
-Pfötchen is a macOS desktop pet built in Swift. Bilini wanders across your
-screen, takes naps and lets you pet her with the mouse pointer. You can switch
-between a version made from her photos and a hand-drawn cat.
+I built Pfötchen in **Swift** with **AppKit** and **Core Animation** to bring
+my cat Bilini onto the Mac desktop. Set her on the top edge of a window and
+she rides along when you drag it. Minimize the window and she falls.
+
+- **Animation:** I used photos of Bilini to generate video clips. A Python
+  script removes the background and measures how far her planted paws move
+  between frames. That sets her walking speed so her paws stay put with each
+  step. There's also a hand-drawn version.
+- **Cat logic:** Stroke her with the pointer and she purrs. Click her seven
+  times in twenty seconds and she tells you she's had enough and walks off.
+- **Chat:** Option-double-click Bilini to open a chat powered by Hermes Agent.
+  Ask her to remind you to buy cat food at six and she can add it to Apple
+  Reminders through EventKit.
 
 The source code is private.
 
