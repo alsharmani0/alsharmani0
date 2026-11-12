@@ -46,6 +46,14 @@ SQLite full-text search, so no document leaves the machine.
 
 [Source code](https://github.com/alsharmani0/belegsuche) · Documentation in German.
 
+## Pfötchen
+
+Pfötchen is a macOS desktop pet built in Swift. Bilini wanders across your
+screen, takes naps and lets you pet her with the mouse pointer. You can switch
+between a version made from her photos and a hand-drawn cat.
+
+The source code is private.
+
 ## markusblaschyk.de
 
 Website for a family-run construction company in Düren, built from HTML, CSS
