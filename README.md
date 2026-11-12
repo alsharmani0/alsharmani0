@@ -49,17 +49,17 @@ SQLite full-text search, so no document leaves the machine.
 ## Pfötchen
 
 I built Pfötchen in **Swift** with **AppKit** and **Core Animation** to bring
-my cat Bilini onto the Mac desktop. Set her on the top edge of a window and
-she rides along when you drag it. Minimize the window and she falls.
+Bellini the cat onto the Mac desktop. Set him on the top edge of a window and
+he rides along when you drag it. Minimize the window and he falls.
 
-- **Animation:** I used photos of Bilini to generate video clips. A Python
-  script removes the background and measures how far her planted paws move
-  between frames. That sets her walking speed so her paws stay put with each
+- **Animation:** I used photos of Bellini to generate video clips. A Python
+  script removes the background and measures how far his planted paws move
+  between frames. That sets his walking speed so his paws stay put with each
   step. There's also a hand-drawn version.
-- **Cat logic:** Stroke her with the pointer and she purrs. Click her seven
-  times in twenty seconds and she tells you she's had enough and walks off.
-- **Chat:** Option-double-click Bilini to open a chat powered by Hermes Agent.
-  Ask her to remind you to buy cat food at six and she can add it to Apple
+- **Cat logic:** Stroke him with the pointer and he purrs. Click him seven
+  times in twenty seconds and he tells you he's had enough and walks off.
+- **Chat:** Option-double-click Bellini to open a chat powered by Hermes Agent.
+  Ask him to remind you to buy cat food at six and he can add it to Apple
   Reminders through EventKit.
 
 The source code is private.
