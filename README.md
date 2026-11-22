@@ -42,7 +42,7 @@ SQLite full-text search, so no document leaves the machine.
   stopped
 - search quality measured on a generated corpus of 64 fictitious files: the
   expected document ranks first for all 16 held-out queries
-- 384 tests that run on macOS in CI with Python 3.11 and 3.12
+- more than 1,000 tests that run on macOS in CI with Python 3.11 and 3.12
 
 [Source code](https://github.com/alsharmani0/belegsuche) · Documentation in German.
 
